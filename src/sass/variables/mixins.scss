@@ -1,0 +1,70 @@
+@mixin placeholder() {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin max-width($media) {
+  @media (max-width: $media) {
+    @content;
+  }
+}
+
+@mixin min-width($media) {
+  @media (min-width: $media) {
+    @content;
+  }
+}
+
+@mixin max-height($media) {
+  @media (max-height: $media) {
+    @content;
+  }
+}
+
+@mixin min-height($media) {
+  @media (min-height: $media) {
+    @content;
+  }
+}
+
+@mixin max-width-and-height($media-width, $media-height) {
+  @media (max-width: $media-width) and (max-height: $media-height) {
+    @content;
+  }
+}
+
+@mixin min-width-and-height($media-width, $media-height) {
+  @media (min-width: $media-width) and (min-height: $media-height) {
+    @content;
+  }
+}
+
+@mixin scrollbar($width, $color-thumb, $color-track, $border-radius) {
+  // height: 100%;
+  // overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-thumb;
+    border-radius: $border-radius;
+  }
+  &::-webkit-scrollbar-track {
+    background: $color-track;
+    border-radius: $border-radius;
+  }
+
+  scrollbar-color: $color-thumb $color-track;
+  scrollbar-width: thin;
+}

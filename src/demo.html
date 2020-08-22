@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Webpack starter</title>
+  </head>
+
+  <body>
+    <div class="menu-overlay j_closeMenu"></div>
+
+    <header>
+      <div class="container">
+        <button data-modal-target="#test1">Открыть модалку 1</button>
+        <button data-modal-target="#test2">Открыть модалку 2</button>
+        <button data-modal-target="#test3">Открыть модалку 3</button>
+      </div>
+
+      <button class="hamburger j_openMenu">Hamb</button>
+
+      <nav class="menu">
+        <button class="hamburger j_closeMenu">close menu</button>
+        <span>Menu-link</span>
+        <span>Menu-link</span>
+        <span>Menu-link</span>
+        <span>Menu-link</span>
+      </nav>
+    </header>
+
+    <main>
+      <div class="dropdown-wrapper">
+        <!-- button -->
+        <button
+          class="dropdown-btn"
+          data-dropdown-target="#dropdown1"
+          data-dropdown-target="#dropdown1"
+        >
+          Открыть дропдаун
+        </button>
+        <!-- ./ End of  button -->
+
+        <div class="dropdown-content j_dropdown" id="dropdown1">
+          <ul>
+            <li>test-1</li>
+            <li>test-2</li>
+            <li>test-3</li>
+            <li>test-4</li>
+            <li>test-5</li>
+            <li>test-6</li>
+          </ul>
+        </div>
+
+        <button class="dropdown-btn" data-dropdown-target="#dropdown2">
+          Открыть дропдаун 2
+        </button>
+        <div class="dropdown-content j_dropdown" id="dropdown2">
+          <ul>
+            <li>test-1 (dropdown 2)</li>
+            <li>test-2 (dropdown 2)</li>
+            <li>test-3 (dropdown 2)</li>
+            <li>test-4 (dropdown 2)</li>
+            <li>test-5 (dropdown 2)</li>
+            <li>test-6 (dropdown 2)</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal-wrapper j_modal" id="test1">
+      <div class="modal">
+        <h2>Test 1</h2>
+      </div>
+    </div>
+
+    <div class="modal-wrapper j_modal" id="test2">
+      <div class="modal">
+        <h2>Test 2</h2>
+      </div>
+    </div>
+
+    <div class="modal-wrapper j_modal" id="test3">
+      <div class="modal">
+        <h2>Test 3</h2>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+$fonts-path: '../fonts/';
+$mont-path: $fonts-path + 'Montserrat/';
+
+// Fonts
+$mont: 'Museo Sans Cyrl';
+$arial: 'Arial';
+
+/* stylelint-disable scss/operator-no-unspaced */
+
+// Montserrat
+@font-face {
+  font-family: $mont;
+  font-style: normal;
+  font-weight: normal;
+  src: url($mont-path+'Montserrat-Regular.woff');
+  src: local('Montserrat-Regular'), local('Montserrat-Regular'),
+    url($mont-path+'Montserrat-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $mont;
+  font-style: italic;
+  font-weight: normal;
+  src: url($mont-path+'Montserrat-Italic.woff');
+  src: local('Montserrat-Italic'), local('Montserrat-Italic'),
+    url($mont-path+'Montserrat-Italic.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $mont;
+  font-style: normal;
+  font-weight: 500;
+  src: url($mont-path+'Montserrat-Medium.woff');
+  src: local('Montserrat-Medium'), local('Montserrat-Medium'),
+    url($mont-path+'Montserrat-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $mont;
+  font-style: normal;
+  font-weight: 600;
+  src: url($mont-path+'Montserrat-SemiBold.woff');
+  src: local('Montserrat-SemiBold'), local('Montserrat-SemiBold'),
+    url($mont-path+'Montserrat-SemiBold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $mont;
+  font-style: normal;
+  font-weight: bold;
+  src: url($mont-path+'Montserrat-Bold.woff');
+  src: local('Montserrat-Bold'), local('Montserrat-Bold'),
+    url($mont-path+'Montserrat-Bold.woff') format('woff');
+  font-display: swap;
+}
+/* stylelint-enable scss/operator-no-unspaced */

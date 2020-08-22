@@ -1,0 +1,57 @@
+{
+  "editor.minimap.enabled": true,
+  "breadcrumbs.enabled": true,
+  "window.menuBarVisibility": "default",
+  "editor.fontSize": 20,
+  "editor.tabSize": 2,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          //following will be in italic (=FlottFlott)
+          "comment",
+          "entity.name.type.class", //class names
+          "keyword", //import, export, return…
+          "constant", //String, Number, Boolean…, this, super
+          "storage.modifier", //static keyword
+          "storage.type.class.js" //class keyword
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          //following will be excluded from italics (VSCode has some defaults for italics)
+          "invalid",
+          "keyword.operator",
+          "constant.numeric.css",
+          "keyword.other.unit.px.css",
+          "constant.numeric.decimal.js",
+          "constant.numeric.json"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "debug.console.fontSize": 20,
+  "markdown.preview.fontSize": 20,
+  "terminal.integrated.fontSize": 20,
+  "emmet.preferences": {
+    "filter.commentBefore": "<!-- [CLASS] --> \n",
+    "filter.commentAfter": " <!-- ./ End of [CLASS] -->"
+  },
+  "git.autofetch": true,
+  "turboConsoleLog.addSemicolonInTheEnd": true,
+  "quokka.suppressExpirationNotifications": true,
+  "window.zoomLevel": 0,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.run": "onSave"
+}

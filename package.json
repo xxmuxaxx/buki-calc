@@ -1,0 +1,72 @@
+{
+  "name": "raoibs",
+  "version": "4.17.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf public && npm install",
+    "build": "webpack --mode production --colors --progress",
+    "prestart": "rimraf public && npm install",
+    "start": "webpack-dev-server --mode development --colors --progress",
+    "lint": "run-s lint:all",
+    "lint:all:eslint": "npm run lint:eslint --ext .js,",
+    "lint:all:prettier": "npm run lint:prettier \"**/*.{js,json,css,scss,html,md}\"",
+    "lint:all:stylelint": "npm run lint:stylelint \"src/**/*.{scss}\"",
+    "lint:eslint": "eslint --fix",
+    "lint:prettier": "prettier --write --loglevel warn",
+    "lint:stylelint": "stylelint --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "autoprefixer": "^9.1.5",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "cssnano": "^4.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-standard": "^14.1.0",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.0.6",
+    "husky": "^4.2.1",
+    "image-webpack-loader": "^4.3.1",
+    "imagemin-lint-staged": "^0.4.0",
+    "lint-staged": "^10.0.7",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.13.1",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.1.0",
+    "standard": "^14.3.1",
+    "style-loader": "^0.23.0",
+    "stylelint": "^13.0.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-recess-order": "^2.0.3",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-scss": "^3.14.2",
+    "svg-sprite-loader": "^4.1.3",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8",
+    "yargs": "^12.0.2"
+  },
+  "dependencies": {
+    "address": "^1.1.0",
+    "babel-polyfill": "^6.26.0",
+    "scroll-lock": "^2.1.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

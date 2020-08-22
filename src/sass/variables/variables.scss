@@ -1,0 +1,163 @@
+/* Colors */
+$white: #fff;
+$black: #000;
+$blue: #116fbf;
+$blue-light: #c3e5f2;
+$cyan: #0081ef;
+$gray: #f3f5f6;
+$gray-dark: #7e7e7e;
+$red: #bd2d21;
+$green-dark: #02a443;
+$purple-dark: #8d03a4;
+$yellow-dark: #b38615;
+$grdn-blue: linear-gradient(180deg, $cyan 0%, $blue 100%), $blue;
+$grdn-blue-light: linear-gradient(180deg, #00c4ef 0%, #2193d3 100%);
+$grdn-white: linear-gradient(180deg, #effbff 0%, #dbf4fe 46.88%, #a2d4e8 100%);
+$grdn-red: linear-gradient(180deg, #e23d2f 0%, #9b2117 100%);
+$grdn-purple: linear-gradient(180deg, #e267f7 0%, #ce32c8 100%), #ce32c8;
+$grdn-yellow: linear-gradient(180deg, #f9b812 0%, #b68813 100%, #b68813 100%);
+
+/* Global */
+// media
+$desktop-sm: 1200px;
+$tablet: 1024px;
+$touch: 900px;
+$phone: 600px;
+$phone-sm: 350px;
+
+// container
+$container-max-width: 1200px;
+$container-padding: 0 15px;
+
+// section
+$section-padding: 60px 0;
+$section-padding-tablet: 40px 0;
+$section-padding-phone: 20px 0;
+
+/* Typography */
+// h1
+$h-one-font: $mont;
+$h-one-font-size: 2.1875rem;
+$h-one-font-size-sm: 1.85rem;
+$h-one-font-weight: 500;
+$h-one-line-height: 1.3;
+$h-one-color: $black;
+$h-one-margin: 20px 0;
+
+// h2
+$h-two-font: $mont;
+$h-two-font-size: 2.1875rem;
+$h-two-font-size-sm: 1.85rem;
+$h-two-font-weight: 500;
+$h-two-line-height: 1.3;
+$h-two-color: $black;
+$h-two-margin: 15px 0;
+
+// h3
+$h-three-font: $mont;
+$h-three-font-size: 1.5625rem;
+$h-three-font-size-sm: 1.375rem;
+$h-three-font-weight: 500;
+$h-three-line-height: 1.3;
+$h-three-color: $black;
+$h-three-margin: 10px 0;
+
+// h4
+$h-four-font: $mont;
+$h-four-font-size: 1.375rem;
+$h-four-font-size-sm: 1.25rem;
+$h-four-font-weight: 500;
+$h-four-line-height: 1.3;
+$h-four-color: $black;
+$h-four-margin: 5px 0;
+
+// h5
+$h-five-font: $mont;
+$h-five-font-size: 1.25rem;
+$h-five-font-size-sm: 1.125rem;
+$h-five-font-weight: 500;
+$h-five-line-height: 1.3;
+$h-five-color: $black;
+$h-five-margin: 5px 0;
+
+// h6
+$h-six-font: $mont;
+$h-six-font-size: 1rem;
+$h-six-font-size-sm: 1rem;
+$h-six-font-weight: 500;
+$h-six-line-height: 1.3;
+$h-six-color: $black;
+$h-six-margin: 5px 0;
+
+/* UI */
+// button
+$button-font: $mont;
+$button-font-size: 14px;
+$button-font-weight: 600;
+$button-line-height: 1.3;
+$button-border-radius: 8px;
+$button-padding: 0.858em 1.5em;
+$button-padding-sm: 1em 1.25em;
+$button-min-width: 220px;
+$button-margin: 5px;
+
+$button-small-min-width: initial;
+$button-small-padding: 0.625em 1.25em;
+$button-small-font-size: 14px;
+
+// input
+$input-font: $mont;
+$input-font-size: 14px;
+$input-font-weight: 500;
+$input-line-height: 1;
+$input-color: $black;
+$input-color-placeholder: $gray-dark;
+$input-border: 1px solid $blue-light;
+$input-border-radius: 6px;
+$input-padding: 0.858em 1.5em;
+$input-padding-sm: 0.75em 1em;
+$input-bg-color: $white;
+$input-margin: 5px;
+$input-focus: 0 0 20px
+  rgba(
+    $color: $black,
+    $alpha: 0.4,
+  );
+
+// textarea
+$textarea-padding: 0.858em 1.5em;
+$textarea-padding-sm: 0.75em 1em;
+$textarea-height: 100px;
+$textarea-margin: 5px;
+
+// checkbox
+$checkbox-font: $mont;
+$checkbox-font-size: 14px;
+$checkbox-font-weight: normal;
+$checkbox-line-height: 1.5;
+$checkbox-color: $black;
+$checkbox-link-color: $gray-dark;
+$checkbox-link-color-hover: $gray-dark;
+$checkbox-link-text-decoration: none;
+$checkbox-link-text-decoration-hover: underline;
+$checkbox-bg-color: rgba(
+  $color: $blue-light,
+  $alpha: 0.8,
+);
+$checkbox-bg-color-active: $white;
+$checkbox-size: 24px;
+$checkbox-icon-size: 14px;
+$checkbox-border: 1px solid transparent;
+$checkbox-border-radius: 5px;
+$checkbox-margin: 5px 0;
+$checkbox-custom-margin: 0 10px 0 0;
+
+// radio
+$radio-size: 20px;
+$radio-border-radius: 50%;
+$radio-margin: 5px 0;
+$radio-custom-margin: 0 10px 0 0;
+$radio-bg-color: $checkbox-bg-color;
+$radio-bg-color-active: $white;
+$radio-icon-size: 12px;
+$radio-icon-bg-color: $blue;

@@ -1,0 +1,364 @@
+/* Buttons */
+button {
+  cursor: pointer;
+}
+.button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: $button-min-width;
+  padding: $button-padding;
+  margin: $button-margin;
+  font-family: $button-font;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  line-height: $button-line-height;
+  color: $white;
+  text-align: center;
+  background: $grdn-blue;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0;
+  border-radius: $button-border-radius;
+  box-shadow: 0 25px 10px -15px rgba($color: $blue, $alpha: 0.3);
+  transition: color 0.3s, background-color 0.3s, border 0.3s, box-shadow 0.3s;
+  transition-timing-function: ease;
+
+  @include max-width($touch) {
+    padding: $button-padding-sm;
+  }
+
+  &:hover {
+    box-shadow: 0 20px 10px -15px rgba($color: $blue, $alpha: 0.3),
+      inset 0 0 10px rgba($color: $black, $alpha: 0.4);
+
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  &:focus {
+    outline: transparent;
+  }
+
+  svg {
+    transition: fill 0.3s, transform 0.3s;
+  }
+
+  &--small {
+    min-width: $button-small-min-width;
+    padding: $button-small-padding;
+    font-size: $button-small-font-size;
+  }
+
+  &--blue-light {
+    background: $grdn-blue-light;
+  }
+
+  &--red {
+    background: $grdn-red;
+  }
+
+  &--white {
+    color: $blue;
+    background: $grdn-white;
+  }
+
+  &--blue {
+    color: $blue;
+    background: none;
+    background-color: rgba($color: $blue-light, $alpha: 0.5);
+    border-color: $blue;
+    border-width: 1px;
+    box-shadow: none;
+
+    &:hover {
+      color: $white;
+      background-color: $blue;
+      box-shadow: none;
+
+      .svg {
+        opacity: 1;
+        stroke: $white;
+      }
+    }
+
+    .svg {
+      display: block;
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      opacity: 0.5;
+      stroke: $blue;
+      transition: stroke 0.3s, opacity 0.3s;
+    }
+  }
+
+  &-tab {
+    min-width: auto;
+    margin: 0;
+    color: rgba($color: $gray-dark, $alpha: 0.5);
+    text-transform: uppercase;
+    background: none;
+    background-color: transparent;
+    border: 1px solid $blue-light;
+    border-radius: 0;
+    box-shadow: none;
+
+    &:first-child {
+      border-right: none;
+      border-radius: 6px 0 0 6px;
+    }
+
+    &:last-child {
+      border-left: none;
+      border-radius: 0 6px 6px 0;
+    }
+
+    &:first-child:last-child {
+      border: 1px solid $blue-light;
+      border-radius: 6px;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 1px;
+        min-width: 1px;
+        height: 70%;
+        content: '';
+        background-color: $blue-light;
+        transform: translateY(-50%);
+      }
+    }
+
+    &:hover {
+      background-color: rgba($color: $blue-light, $alpha: 0.5);
+      box-shadow: none;
+    }
+
+    &.active {
+      color: $blue;
+    }
+  }
+}
+
+/* Inputs && Textareas */
+.input,
+.textarea {
+  padding: $input-padding;
+  margin: $input-margin;
+  overflow: hidden;
+  font-family: $input-font;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+  line-height: $input-line-height;
+  color: $input-color;
+  background-color: $input-bg-color;
+  border: $input-border;
+  border-radius: $input-border-radius;
+  outline: transparent;
+  box-shadow: 0 4px 10px rgba(176, 189, 191, 0.25);
+  transition: border 0.3s;
+
+  @include max-width($touch) {
+    padding: $input-padding-sm;
+  }
+
+  @include placeholder() {
+    font-family: $input-font;
+    font-size: $input-font-size;
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    color: $input-color-placeholder;
+    opacity: 1;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  &:hover {
+    border: 1px solid $blue;
+  }
+
+  &:focus {
+    // box-shadow: $input-focus;
+    border: 1px solid $blue;
+
+    @include placeholder() {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+}
+
+.textarea {
+  height: $textarea-height;
+  padding: $textarea-padding;
+  margin: $textarea-margin;
+  resize: none;
+
+  @include max-width($touch) {
+    padding: $textarea-padding-sm;
+  }
+}
+
+/* Checkboxes && Radios */
+.checkbox,
+.radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: $checkbox-margin;
+  cursor: pointer;
+
+  &:hover {
+    .checkbox__custom,
+    .radio__custom {
+      border-color: $blue;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -2;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+
+    &:checked + .checkbox__custom {
+      background-color: $checkbox-bg-color-active;
+
+      .checkbox__icon {
+        opacity: 1;
+      }
+    }
+  }
+  &__custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: $checkbox-size;
+    min-width: $checkbox-size;
+    height: $checkbox-size;
+    min-height: $checkbox-size;
+    margin: $checkbox-custom-margin;
+    background-color: $checkbox-bg-color;
+    border: $checkbox-border;
+    border-radius: $checkbox-border-radius;
+    transition: 0.3s;
+  }
+  &__text {
+    display: block;
+    font-family: $checkbox-font;
+    font-size: $checkbox-font-size;
+    font-weight: $checkbox-font-weight;
+    line-height: $checkbox-line-height;
+    color: $checkbox-color;
+  }
+
+  &__link {
+    color: $checkbox-link-color;
+    text-decoration: $checkbox-link-text-decoration;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $checkbox-link-color-hover;
+      text-decoration: $checkbox-link-text-decoration-hover;
+    }
+  }
+
+  &__icon {
+    width: $checkbox-icon-size;
+    height: $checkbox-icon-size;
+    opacity: 0;
+    stroke: $blue;
+    transition: 0.3s;
+  }
+}
+
+.radio {
+  margin: $radio-margin;
+  &__input {
+    &:checked + .radio__custom {
+      background-color: $radio-bg-color-active;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__custom {
+    position: relative;
+    width: $radio-size;
+    min-width: $radio-size;
+    height: $radio-size;
+    min-height: $radio-size;
+    margin: $radio-custom-margin;
+    background-color: $radio-bg-color;
+    border-radius: $radio-border-radius;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $radio-icon-size;
+      height: $radio-icon-size;
+      content: '';
+      background-color: $radio-icon-bg-color;
+      border-radius: $radio-border-radius;
+      opacity: 0;
+      transition: opacity 0.3s;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+/* Cancel (Test) */
+.cancel {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  &--fixed {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+  }
+  &:hover,
+  &:focus {
+    .cancel__item {
+      background-color: $red;
+    }
+  }
+  &__item {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #bdbdbd;
+    transition: background-color 0.3s;
+    &:first-child {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:last-child {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}

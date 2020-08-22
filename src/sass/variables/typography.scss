@@ -1,0 +1,97 @@
+html {
+  font-family: $mont;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $black;
+
+  @include max-width($desktop-sm) {
+    font-size: 15px;
+  }
+
+  @include max-width($tablet) {
+    font-size: 14px;
+  }
+
+  @include max-width($phone) {
+    font-size: 13px;
+  }
+}
+
+h1,
+.h1 {
+  margin: $h-one-margin;
+  font-family: $h-one-font;
+  font-size: $h-one-font-size;
+  font-weight: $h-one-font-weight;
+  line-height: $h-one-line-height;
+  color: $h-one-color;
+
+  @include max-width($touch) {
+    font-size: $h-one-font-size-sm;
+  }
+}
+h2,
+.h2 {
+  margin: $h-two-margin;
+  font-family: $h-two-font;
+  font-size: $h-two-font-size;
+  font-weight: $h-two-font-weight;
+  line-height: $h-two-line-height;
+  color: $h-two-color;
+
+  @include max-width($touch) {
+    font-size: $h-two-font-size-sm;
+  }
+}
+h3,
+.h3 {
+  margin: $h-three-margin;
+  font-family: $h-three-font;
+  font-size: $h-three-font-size;
+  font-weight: $h-three-font-weight;
+  line-height: $h-three-line-height;
+  color: $h-three-color;
+
+  @include max-width($touch) {
+    font-size: $h-three-font-size-sm;
+  }
+}
+h4,
+.h4 {
+  margin: $h-four-margin;
+  font-family: $h-four-font;
+  font-size: $h-four-font-size;
+  font-weight: $h-four-font-weight;
+  line-height: $h-four-line-height;
+  color: $h-four-color;
+
+  @include max-width($touch) {
+    font-size: $h-four-font-size-sm;
+  }
+}
+h5,
+.h5 {
+  margin: $h-five-margin;
+  font-family: $h-five-font;
+  font-size: $h-five-font-size;
+  font-weight: $h-five-font-weight;
+  line-height: $h-five-line-height;
+  color: $h-five-color;
+
+  @include max-width($touch) {
+    font-size: $h-five-font-size-sm;
+  }
+}
+h6,
+.h6 {
+  margin: $h-six-margin;
+  font-family: $h-six-font;
+  font-size: $h-six-font-size;
+  font-weight: $h-six-font-weight;
+  line-height: $h-six-line-height;
+  color: $h-six-color;
+
+  @include max-width($touch) {
+    font-size: $h-six-font-size-sm;
+  }
+}
