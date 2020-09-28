@@ -1,4 +1,4 @@
-# Webpack-starter
+# Buki-calc
 
 Simple webpack configuration with babel, sass and webpack-dev-server.
 
