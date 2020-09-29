@@ -1,13 +1,11 @@
 .range-slider {
-  margin: 20px 60px;
-
   &__label {
     display: flex;
     flex-direction: column;
     border: 1px solid #d3d4d4;
     border-bottom: none;
     border-radius: 8px;
-    transition: 0.2;
+    transition: 0.2s;
 
     &:hover {
       border-color: #a7a8a9;

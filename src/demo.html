@@ -32,13 +32,9 @@
     </header>
 
     <main>
-      <div class="dropdown-wrapper" style="display: none;">
+      <div class="dropdown-wrapper">
         <!-- button -->
-        <button
-          class="dropdown-btn"
-          data-dropdown-target="#dropdown1"
-          data-dropdown-target="#dropdown1"
-        >
+        <button class="dropdown-btn" data-dropdown-target="#dropdown1">
           Открыть дропдаун
         </button>
         <!-- ./ End of  button -->
@@ -69,20 +65,52 @@
         </div>
       </div>
 
-      <div
-        class="range-slider"
-        data-rangeSlidersMB="Тираж"
-        data-rangeSlidersMB-max="90000"
-      ></div>
+      <div style="margin: 20px 60px;">
+        <div
+          class="range-slider"
+          data-rangeSlidersMB="Test"
+          data-rangeSlidersMB-start="1500000"
+          data-rangeSlidersMB-min="0"
+          data-rangeSlidersMB-max="9000000"
+          data-rangeSlidersMB-step="100000"
+        ></div>
+      </div>
 
-      <div
-        class="range-slider"
-        data-rangeSlidersMB="Test"
-        data-rangeSlidersMB-start="1500000"
-        data-rangeSlidersMB-min="0"
-        data-rangeSlidersMB-max="9000000"
-        data-rangeSlidersMB-step="100000"
-      ></div>
+      <div style="margin: 20px 60px;">
+        <div class="dropdown-select j_dropdown j_naming" id="select">
+          <div
+            class="dropdown-select__button"
+            data-dropdown-target="#select"
+            role="button"
+          >
+            <p class="dropdown-select__label">Ориентация</p>
+            <p class="dropdown-select__name" data-naming="Альбомная">
+              Альбомная
+            </p>
+          </div>
+
+          <div class="dropdown-select__dropdown-content">
+            <ul class="dropdown-select__dropdown-list" data-naming-triggers>
+              <li class="dropdown-select__dropdown-item">
+                <label class="radio j_closeDropdown">
+                  <input class="radio__input" type="radio" name="select_1" />
+                  <span class="radio__text">
+                    Альбомная
+                  </span>
+                </label>
+              </li>
+              <li class="dropdown-select__dropdown-item">
+                <label class="radio j_closeDropdown">
+                  <input class="radio__input" type="radio" name="select_2" />
+                  <span class="radio__text">
+                    Книжная
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
 
     <div class="modal-wrapper j_modal" id="test1">
