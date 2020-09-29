@@ -1,5 +1,5 @@
 {
-  "name": "raoibs",
+  "name": "buki-calc",
   "version": "4.17.2",
   "description": "",
   "main": "index.js",
@@ -62,6 +62,7 @@
   "dependencies": {
     "address": "^1.1.0",
     "babel-polyfill": "^6.26.0",
+    "nouislider": "^14.6.2",
     "scroll-lock": "^2.1.4"
   },
   "husky": {

@@ -3,6 +3,7 @@
 // @import 'extensions/demo.scss';
 
 // Libs - Библиотеки
+@import '~nouislider/distribute/nouislider.css';
 
 /* @import "libs/slick"; */
 
@@ -18,3 +19,6 @@
 // Sections - Разделы сайта
 @import 'sections/header';
 @import 'sections/footer';
+
+// Modules - Модули
+@import 'modules/noUiSlider.scss';

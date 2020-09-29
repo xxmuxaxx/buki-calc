@@ -8,3 +8,4 @@ import './modules/polyfills/forEach';
 import './modules/polyfills/closest';
 
 // modules
+import './modules/noUiSlider';

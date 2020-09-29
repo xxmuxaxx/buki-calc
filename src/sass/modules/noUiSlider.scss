@@ -1,0 +1,109 @@
+.range-slider {
+  margin: 20px 60px;
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d3d4d4;
+    border-bottom: none;
+    border-radius: 8px;
+    transition: 0.2;
+
+    &:hover {
+      border-color: #a7a8a9;
+    }
+  }
+
+  &__name {
+    padding: 10px 10px 0;
+    font-size: 16px;
+    color: #737476;
+  }
+
+  &__input {
+    padding: 5px 10px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    outline: none;
+  }
+
+  .noUi-target {
+    height: 6px;
+    cursor: pointer;
+    background-color: #d3d4d4;
+    border: 0;
+    border-radius: 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: none;
+    transition: 0.2s;
+
+    &:active,
+    &:hover {
+      background-color: #a7a8a9;
+    }
+
+    &:active .noUi-handle {
+      border-color: #497b56;
+
+      &::before {
+        background-color: #497b56;
+      }
+    }
+
+    &:active .noUi-connect {
+      background-color: #497b56;
+    }
+
+    &:active .noUi-handle::before,
+    &:hover .noUi-handle::before {
+      top: 4px;
+      left: 4px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .noUi-connect {
+    background-color: #53b374;
+    border: 0;
+    transition: background-color 0.2s;
+  }
+
+  .noUi-handle {
+    top: -8px;
+    right: -10px;
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    overflow: visible;
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid #53b374;
+    border-radius: 50%;
+    outline: none;
+    transition: 0.2s;
+
+    &::before {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 4px;
+      height: 4px;
+      content: '';
+      background-color: #53b374;
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .noUi-connects {
+    border: 0;
+    border-radius: 0 0 8px 8px;
+  }
+}
