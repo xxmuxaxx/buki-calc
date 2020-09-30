@@ -12,7 +12,302 @@
   <body>
     <!-- calculator-2020 -->
     <section class="calculator-2020-section">
-      <div class="container"> </div>
+      <div class="container">
+        <!-- tabs -->
+        <div class="calculator-tabs" data-tabs="tabs">
+          <div class="calculator-tab" data-tab="1">
+            <fieldset>
+              <legend>Твердый переплет</legend>
+            </fieldset>
+          </div>
+          <div class="calculator-tab" data-tab="2">
+            <fieldset>
+              <legend>Работа со временем</legend>
+            </fieldset>
+          </div>
+        </div>
+        <!-- ./ End of tabs -->
+        <!-- tabs-content -->
+        <div class="calculator-tabs-content" data-tabs-contents="tabs">
+          <div class="calculator-tab-content" data-tab-content="1">
+            <form class="calculator-content">
+              <div class="calculator-content__left">
+                <div class="calculator-item calculator-item--no-border">
+                  <fieldset>
+                    <!--
+                      data-rangeSlidersMB *
+                      data-rangeSlidersMB-start default = 0
+                      data-rangeSlidersMB-min default = 0
+                      data-rangeSlidersMB-max *
+                      data-rangeSlidersMB-step default = 0
+                    -->
+                    <div
+                      class="range-slider"
+                      data-rangeSlidersMB="Тираж"
+                      data-rangeSlidersMB-max="90000"
+                    ></div>
+                    <div
+                      class="dropdown-select j_dropdown j_naming"
+                      id="select1"
+                    >
+                      <div
+                        class="dropdown-select__button"
+                        data-dropdown-target="#select1"
+                        role="button"
+                      >
+                        <p class="dropdown-select__label">Ориентация</p>
+                        <p
+                          class="dropdown-select__name"
+                          data-naming="Альбомная"
+                        >
+                          Альбомная
+                        </p>
+                      </div>
+
+                      <div class="dropdown-select__dropdown-content">
+                        <ul
+                          class="dropdown-select__dropdown-list"
+                          data-naming-triggers
+                        >
+                          <li class="dropdown-select__dropdown-item">
+                            <label class="radio j_closeDropdown">
+                              <input
+                                class="radio__input"
+                                type="radio"
+                                name="select_1"
+                              />
+                              <span class="radio__text">
+                                Альбомная
+                              </span>
+                            </label>
+                          </li>
+                          <li class="dropdown-select__dropdown-item">
+                            <label class="radio j_closeDropdown">
+                              <input
+                                class="radio__input"
+                                type="radio"
+                                name="select_1"
+                              />
+                              <span class="radio__text">
+                                Книжная
+                              </span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="calculator-item">
+                  <fieldset>
+                    <legend>Основной блок</legend>
+                    <div
+                      class="dropdown-select j_dropdown j_naming"
+                      id="select"
+                    >
+                      <div
+                        class="dropdown-select__button"
+                        data-dropdown-target="#select"
+                        role="button"
+                      >
+                        <p class="dropdown-select__label">Формат</p>
+                        <p
+                          class="dropdown-select__name"
+                          data-naming="А4 (высота 297 мм, ширина 210 мм)"
+                        >
+                          А4 (высота 297 мм, ширина 210 мм)
+                        </p>
+                      </div>
+
+                      <div class="dropdown-select__dropdown-content">
+                        <ul
+                          class="dropdown-select__dropdown-list"
+                          data-naming-triggers
+                        >
+                          <li class="dropdown-select__dropdown-item">
+                            <label class="radio j_closeDropdown">
+                              <input
+                                class="radio__input"
+                                type="radio"
+                                name="select_1"
+                              />
+                              <span class="radio__text">
+                                А4 (высота 297 мм, ширина 210 мм)
+                              </span>
+                            </label>
+                          </li>
+                          <li class="dropdown-select__dropdown-item">
+                            <label class="radio j_closeDropdown">
+                              <input
+                                class="radio__input"
+                                type="radio"
+                                name="select_1"
+                              />
+                              <span class="radio__text">
+                                А4 (высота 297 мм, ширина 210 мм)
+                              </span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="dropdown-select j_dropdown j_naming"
+                      id="select2"
+                    >
+                      <div
+                        class="dropdown-select__button"
+                        data-dropdown-target="#select2"
+                        role="button"
+                      >
+                        <p class="dropdown-select__label">Цветность печати</p>
+                        <p
+                          class="dropdown-select__name"
+                          data-naming="Альбомная"
+                        >
+                          Альбомная
+                        </p>
+                      </div>
+
+                      <div class="dropdown-select__dropdown-content">
+                        <ul
+                          class="dropdown-select__dropdown-list"
+                          data-naming-triggers
+                        >
+                          <li class="dropdown-select__dropdown-item">
+                            <label class="radio j_closeDropdown">
+                              <input
+                                class="radio__input"
+                                type="radio"
+                                name="select_3"
+                              />
+                              <span class="radio__text">
+                                Полноцветная (CMYK)
+                              </span>
+                            </label>
+                          </li>
+                          <li class="dropdown-select__dropdown-item">
+                            <label class="radio j_closeDropdown">
+                              <input
+                                class="radio__input"
+                                type="radio"
+                                name="select_3"
+                              />
+                              <span class="radio__text">
+                                Полноцветная (CMYK)
+                              </span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="calculator-item">
+                  <fieldset>
+                    <legend>Дополнительно</legend>
+                    <div class="calculator-checkbox">
+                      <label class="checkbox-switch">
+                        <input
+                          class="checkbox-switch__input"
+                          type="checkbox"
+                          name="checkbox_1"
+                        />
+                        <div class="checkbox-switch__box"></div>
+                        <p class="calculator-checkbox__text">
+                          Кругленый корешок
+                        </p>
+                      </label>
+                    </div>
+                    <div class="calculator-checkbox">
+                      <label class="checkbox-switch">
+                        <input
+                          class="checkbox-switch__input"
+                          type="checkbox"
+                          name="checkbox_1"
+                        />
+                        <div class="checkbox-switch__box"></div>
+                        <p class="calculator-checkbox__text">
+                          Цветной каптал
+                        </p>
+                      </label>
+                    </div>
+                    <div class="calculator-checkbox">
+                      <label class="checkbox-switch">
+                        <input
+                          class="checkbox-switch__input"
+                          type="checkbox"
+                          name="checkbox_1"
+                        />
+                        <div class="checkbox-switch__box"></div>
+                        <p class="calculator-checkbox__text">
+                          Ляссе
+                        </p>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="calculator-content__right">
+                <input type="submit" class="button" value="Рассчитать" />
+                <div class="calculator-item calculator-item--no-border">
+                  <fieldset>
+                    <div class="calculator-checkbox">
+                      <label class="checkbox-switch">
+                        <input
+                          class="checkbox-switch__input"
+                          type="checkbox"
+                          name="checkbox_1"
+                        />
+                        <div class="checkbox-switch__box"></div>
+                        <p class="calculator-checkbox__text">
+                          Полная предоплата
+                        </p>
+                      </label>
+                    </div>
+                    <div class="calculator-checkbox">
+                      <label class="checkbox-switch">
+                        <input
+                          class="checkbox-switch__input"
+                          type="checkbox"
+                          name="checkbox_1"
+                        />
+                        <div class="checkbox-switch__box"></div>
+                        <p class="calculator-checkbox__text">
+                          По готовности, доставим на следующий рабочий день
+                        </p>
+                      </label>
+                    </div>
+                    <div class="price">
+                      <p class="price__tax">
+                        Стоимость тиража с НДС 20%
+                      </p>
+                      <p class="price__total">
+                        143 500 ₽
+                      </p>
+                    </div>
+                  </fieldset>
+                </div>
+                <button class="button button--invert">
+                  Отправить расчет на почту
+                </button>
+
+                <img
+                  src="./img/img.jpg"
+                  alt=""
+                  class="calculator-content__right-image"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="calculator-tab-content" data-tab-content="2">
+            <div class="calculator-content"></div>
+          </div>
+        </div>
+        <!-- ./ End of tabs-content -->
+      </div>
       <!-- ./ End of container -->
     </section>
     <!-- ./ End of calculator-2020 -->

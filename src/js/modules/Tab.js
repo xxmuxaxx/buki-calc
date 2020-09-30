@@ -7,7 +7,6 @@ export default class TabsController {
     this.$elsWrap = options.$elsWrap;
     this.$triggers = options.$triggers;
     this.$els = options.$els;
-    this.$additionalEls = options.$additionalEls || [];
 
     this.init();
   }
@@ -29,21 +28,15 @@ export default class TabsController {
       $trigger.classList.remove('active');
     });
 
-    this.$additionalEls.forEach(($additionalEl) => {
-      $additionalEl.classList.remove('active');
-    });
-
     $trigger.classList.add('active');
 
-    this.$els.forEach(($el, i) => {
+    this.$els.forEach(($el) => {
       const isCurrent = $el.getAttribute('data-tab-content') === id;
 
       if (isCurrent) {
         $el.classList.add('active');
-        this.$additionalEls[i].classList.add('active');
       } else {
         $el.classList.remove('active');
-        this.$additionalEls[i].classList.remove('active');
       }
     });
   }
@@ -63,10 +56,6 @@ export default class TabsController {
       const $elsWrap = document.querySelector(`[data-tabs-contents="${id}"]`);
       if (!$elsWrap) return false;
       const $els = $elsWrap.querySelectorAll('[data-tab-content]');
-      const $additionalElsWrap = document.querySelector(
-        `[data-tabs-additional="${id}"]`
-      );
-      const $additionalEls = $additionalElsWrap.querySelectorAll(`[data-tab]`);
 
       // eslint-disable-next-line no-new
       new TabsController({
@@ -75,7 +64,6 @@ export default class TabsController {
         $elsWrap,
         $triggers: [...$triggers],
         $els: [...$els],
-        $additionalEls,
       });
     });
   }

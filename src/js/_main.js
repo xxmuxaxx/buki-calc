@@ -10,3 +10,4 @@ import './modules/polyfills/closest';
 // modules
 import './modules/Select';
 import './modules/noUiSlider';
+import './modules/Tab';
