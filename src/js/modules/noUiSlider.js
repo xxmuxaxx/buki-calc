@@ -16,7 +16,7 @@ class NoUiSlider {
       const template = `
       <label class="range-slider__label">
         <p class="range-slider__name">${$name}</p>
-        <input class="range-slider__input" type="text" />
+        <input class="range-slider__input" type="text" readonly />
         <div class="range-slider__slider" id="slider"></div>
       </label>
       `;

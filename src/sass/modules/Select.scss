@@ -23,7 +23,7 @@
     padding: 10px 40px 10px 10px;
     cursor: pointer;
     border: 1px solid #d3d4d4;
-    border-radius: 8px;
+    border-radius: $border-radius;
     transition: all ease 0.3s;
 
     &:hover {
@@ -66,7 +66,7 @@
     overflow-y: auto;
     visibility: hidden;
     border: 1px solid #d3d4d4;
-    border-radius: 8px;
+    border-radius: $border-radius;
     opacity: 0;
     transition: all ease 0.3s;
     transform: translateY(50px);

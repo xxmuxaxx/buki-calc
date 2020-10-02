@@ -80,7 +80,6 @@
   padding: 60px;
   background-color: #fff;
   border-radius: 40px;
-  box-shadow: 0 0 6px rgba(#000, 0.2);
 
   @include max-width($tablet) {
     padding: 40px;
@@ -99,7 +98,7 @@
     min-width: 50%;
 
     .calculator-item:not(:last-of-type) {
-      margin: 0 0 20px;
+      margin: 0 0 30px;
     }
   }
 
@@ -135,7 +134,7 @@
     width: 100%;
     padding: 40px;
     border: 1px solid #d3d4d4;
-    border-radius: 20px;
+    border-radius: 30px;
 
     @include max-width($tablet) {
       padding: 20px;
@@ -147,9 +146,12 @@
   }
 
   legend {
+    position: relative;
+    top: -0.6rem;
+    height: 0;
     padding: 0 20px;
     font-size: 1.2em;
-    color: #d3d4d4;
+    color: #737476;
   }
 
   &--no-border {
@@ -183,7 +185,7 @@
   .calculator-checkbox__text {
     order: 0;
     margin: 0 20px 0 0;
-    color: #d3d4d4;
+    color: #737476;
     transition: color 0.3s;
   }
 
@@ -193,15 +195,37 @@
 }
 
 .price {
+  > *:not(:last-child) {
+    margin: 0 0 10px;
+  }
   &__tax {
-    margin: 0 0 5px;
-    font-size: 0.9rem;
-    font-weight: bold;
+    font-size: 1rem;
     color: #a7a8a9;
   }
 
   &__total {
     font-size: 1.6rem;
     font-weight: bold;
+  }
+
+  &__alarm {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: #a7a8a9;
+  }
+}
+
+.policy {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  color: #a7a8a9;
+
+  &__link {
+    color: #a7a8a9;
+    transition: color ease 0.3s;
+
+    &:hover {
+      color: #737476;
+    }
   }
 }

@@ -44,7 +44,8 @@
                     <div
                       class="range-slider"
                       data-rangeSlidersMB="Тираж"
-                      data-rangeSlidersMB-max="90000"
+                      data-rangeSlidersMB-max="5000"
+                      data-rangeSlidersMB-step="100"
                     ></div>
                     <div
                       class="dropdown-select j_dropdown j_naming"
@@ -251,7 +252,7 @@
                 </div>
               </div>
               <div class="calculator-content__right">
-                <input type="submit" class="button" value="Рассчитать" />
+                <input type="submit" class="button" value="Оформить заказ" />
                 <div class="calculator-item calculator-item--no-border">
                   <fieldset>
                     <div class="calculator-checkbox">
@@ -287,12 +288,24 @@
                       <p class="price__total">
                         143 500 ₽
                       </p>
+                      <p class="price__alarm">
+                        * Данная цена не является публичной офертой и считается
+                        приблизительной, для точного расчета оставьте заявку
+                      </p>
                     </div>
                   </fieldset>
                 </div>
                 <button class="button button--invert">
                   Отправить расчет на почту
                 </button>
+
+                <div class="policy">
+                  <span class="policy__text">
+                    Нажимая на кнопку "Отправить", вы даете согласие на
+                    обработку
+                  </span>
+                  <a href="#" class="policy__link">персональных данных</a>
+                </div>
 
                 <img
                   src="./img/img.jpg"

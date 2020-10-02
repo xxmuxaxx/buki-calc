@@ -4,7 +4,7 @@
     flex-direction: column;
     border: 1px solid #d3d4d4;
     border-bottom: none;
-    border-radius: 8px;
+    border-radius: $border-radius;
     transition: 0.2s;
 
     &:hover {
@@ -33,7 +33,7 @@
     background-color: #d3d4d4;
     border: 0;
     border-radius: 0;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 $border-radius $border-radius;
     box-shadow: none;
     transition: 0.2s;
 
@@ -103,6 +103,6 @@
 
   .noUi-connects {
     border: 0;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 $border-radius $border-radius;
   }
 }
