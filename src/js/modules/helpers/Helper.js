@@ -204,3 +204,17 @@ export default class Helper {
       return Helper.binarySearch(data, target, searchProperty, start, middle);
   }
 }
+
+export function debounce(fn, wait) {
+  let timeout;
+  return function(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      // eslint-disable-next-line no-invalid-this
+      fn.apply(this, args);
+      // fn(...args)
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}

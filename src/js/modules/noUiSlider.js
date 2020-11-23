@@ -1,6 +1,5 @@
 import noUiSlider from 'nouislider';
-import { prettify } from './helpers/Helper';
-
+import { debounce, prettify } from './helpers/Helper';
 class NoUiSlider {
   static initAll() {
     const $rangeSliders = document.querySelectorAll('[data-rangeSlidersMB]');
@@ -16,7 +15,7 @@ class NoUiSlider {
       const template = `
       <label class="range-slider__label">
         <p class="range-slider__name">${$name}</p>
-        <input class="range-slider__input" type="text" readonly />
+        <input class="range-slider__input" type="text" />
         <div class="range-slider__slider" id="slider"></div>
       </label>
       `;
@@ -36,11 +35,15 @@ class NoUiSlider {
         },
       });
 
-      $input.addEventListener('input', () => {
-        $input.value = prettify($input.value.replace(/[^\d]/g, ''));
+      const alerto = () => console.log(1);
 
-        $slider.noUiSlider.set($input.value.replace(' ', ''));
-      });
+      $input.addEventListener(
+        'input',
+        debounce(() => {
+          $input.value = prettify($input.value.replace(/[^\d]/g, ''));
+          $slider.noUiSlider.set($input.value.replace(' ', ''));
+        }, 800)
+      );
 
       $slider.noUiSlider.on('update', function(values, handle) {
         $input.value = prettify(Math.round(values[handle]));
