@@ -94,12 +94,7 @@ export default class ClassToggler {
       enablePageScroll(this.$el);
     }
 
-    // eslint-disable-next-line no-useless-call
-    this.closeCallback.call(
-      this,
-      // eslint-disable-next-line no-void
-      e && e.currentTarget ? e.currentTarget : void 0
-    );
+    this._isOpen && this.closeCallback.call([this, e && e.currentTarget]);
 
     this._isOpen = false;
   }

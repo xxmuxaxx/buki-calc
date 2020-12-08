@@ -35,8 +35,6 @@ class NoUiSlider {
         },
       });
 
-      const alerto = () => console.log(1);
-
       $input.addEventListener(
         'input',
         debounce(() => {
